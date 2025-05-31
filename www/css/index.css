@@ -172,7 +172,7 @@ nav a:hover {
 .item1 {
 	background-image: url(../images/imagem-4.jpg);
 	border-radius: 15px;
-    width: 250px;
+        width: 250px;
 	height: 150px;
 	  
 }
@@ -180,14 +180,14 @@ nav a:hover {
 .item2 {
 	background-image: url(../images/imagem-1.jfif);
 	border-radius: 15px;
-    width: 250px;
+        width: 250px;
 	height: 150px;
 }
 
 .item3 {
 	background-image: url(../images/imagem-2.jfif);
 	border-radius: 15px;
-    width: 250px;
+        width: 250px;
 	height: 150px;
 }
 

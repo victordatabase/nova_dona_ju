@@ -2,9 +2,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Lanchonete</title>
+	<title>Lanchonete - Trabalhe Conosco</title>
 	<link rel="icon" href="www/icons/comida-de-casamento.png">
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, 
+	<meta name="viewport" content="user-scalable=no, initial-scale=1,	
 		maximum-scale=1, minimum-scale=1, width=device-width">
 	<link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
@@ -24,7 +24,7 @@
 			<a href="index.html#" class="brand-logo">
 				<div class="logo logo-small"></div>
 			</a>
- 			<a href="#" data-activates="mobile-demo" class="button-collapse"><i id="main_menu" class="material-icons">menu</i></a>
+			<a href="#" data-activates="mobile-demo" class="button-collapse"><i id="main_menu" class="material-icons">menu</i></a>
 		</div>
 
 		<ul class="right hide-on-med-and-down brand-logo">
@@ -55,22 +55,22 @@
 <div id="trabalheconosco" class="container">
 	<h2 class="center">Trabalhe conosco</h2>
 	<div class="row">
-	 <form class="col m6 l6 s12 offset-l3 transparent">
+	 <form id="form-trabalhe-conosco" class="col m6 l6 s12 offset-l3 transparent">
 		<div class="row">
 			<div class="input-field col m12 l12 s12">
-				<input id="nome" type="text" class="validate">
-	      <label for="nome">Nome</label>
+				<input id="nome" type="text" class="validate" required>
+	       <label for="nome">Nome</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col m12 l12 s12">
-				<input id="email" type="email" class="validate">
+				<input id="email" type="email" class="validate" required>
 				<label for="email">Email</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="file-field input-field">
-				<div class="btn botao">	<span>Arquivo</span>	<input type="file">		</div>
+				<div class="btn botao">	<span>Arquivo (Currículo)</span>	<input type="file">		</div>
 				<div class="file-path-wrapper">
 					<input type="text" class="file-path validate">
 				</div>
@@ -119,6 +119,33 @@
 <script type="text/javascript" src="www/js/jquery.min.js"></script>
 <script type="text/javascript" src="www/js/materialize.min.js"></script>
 <script type="text/javascript" src="www/js/index.js"></script>
+
+<script>
+    // Seleciona o formulário pelo ID que criamos
+    const formTrabalheConosco = document.getElementById('form-trabalhe-conosco');
+
+    formTrabalheConosco.addEventListener('submit', function(event) {
+        // Impede o envio padrão do formulário
+        event.preventDefault();
+
+        // Pega o valor dos campos de nome e email
+        const nome = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+
+        // SEU NÚMERO DE TELEFONE
+        const telefone = '5511956518110'; 
+
+        // Cria o texto da mensagem de notificação.
+        // O '%0A' serve para pular uma linha na mensagem do WhatsApp.
+        const textoMensagem = `Nova candidatura recebida pelo site!%0A%0A*Nome do Candidato:* ${nome}%0A*Email para Contato:* ${email}%0A%0A(Lembre-se de responder ao e-mail para solicitar o currículo).`;
+
+        // Monta a URL final para o WhatsApp
+        const urlWhatsApp = `https://wa.me/${telefone}?text=${textoMensagem}`;
+
+        // Abre a URL em uma nova aba
+        window.open(urlWhatsApp, '_blank');
+    });
+</script>
 
 </body>
 </html>

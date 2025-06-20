@@ -509,3 +509,18 @@ footer p {
 .icon-cor{
 	backgroud-color: #ffff !important;
 }
+
+
+/* --- CÓDIGO PARA AUMENTAR O MENU MOBILE --- */
+
+/* Aumenta a fonte e o espaçamento dos links no menu lateral */
+.side-nav li a {
+    font-size: 1.2rem;  /* Aumenta o tamanho da fonte (o padrão é 1rem) */
+    height: 55px;       /* Aumenta a altura de cada item para dar mais espaço */
+    line-height: 55px;  /* Centraliza o texto verticalmente na nova altura */
+}
+
+/* Opcional: Aumenta o ícone de menu "hambúrguer" */
+.button-collapse i {
+    font-size: 2.5rem; /* Deixa o ícone um pouco maior */
+}

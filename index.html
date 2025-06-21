@@ -174,17 +174,16 @@
         </div>
         <div id="pratos">
             <div class="row">
-                <div class="col s6 m6 l6">
+                <div class="col s12 m6 l6">
                     <div class="menu-item item1" ></div>
                     <div>
                         <h5>Estrogonofe</h5>
                         <p>Carne ou frango, champignon, arroz
                             e batata palha para acompanhamento 
-                            
                         </p>
                     </div>
                 </div>
-                <div class="col s6 m6 l6">
+                <div class="col s12 m6 l6">
                     <div class="menu-item item2">
                     </div>
                     <div>
@@ -193,8 +192,9 @@
                             laranja fatiada, torresmo e vinagrete</p>
                     </div>
                 </div>
-            </div> <div class="row">
-                <div class="col s6 m6 l6">
+            </div> 
+            <div class="row">
+                <div class="col s12 m6 l6">
                     <div class="menu-item item3"></div>
                     <div>
                         <h5>Churrasco </h5>
@@ -203,7 +203,7 @@
                            </p>
                     </div>
                 </div>
-                <div class="col s6 m6 l6">
+                <div class="col s12 m6 l6">
                     <div class="menu-item item4"></div>
                     <div>
                         <h5>Macarrão</h5>
@@ -211,7 +211,9 @@
                            </p>
                     </div>
                 </div>
-            </div> </div> <div id="sobremesas">
+            </div> 
+        </div> 
+        <div id="sobremesas">
             <div class="row">
                 <div class="col s12 m6 l6 ">
                     <div class="menu-item item5"></div>
@@ -221,7 +223,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col s6 m6 l6">
+                <div class="col s12 m6 l6">
                     <div class="menu-item item6"></div>
                     <div>
                         <h5>Sorvete</h5>
@@ -231,7 +233,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col s6 m6 l6">
+                <div class="col s12 m6 l6">
                     <div class="menu-item item7"></div>
                     <div>
                         <h5>Bolo</h5>
@@ -240,7 +242,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col s6 m6 l6">
+                <div class="col s12 m6 l6">
                     <div class="menu-item item9"></div>
                     <div>
                         <h5>Fondue</h5>
@@ -256,7 +258,8 @@
             </a>
         </div>
     </div>
-</section> <div class="divider container"></div>  
+</section> 
+<div class="divider container"></div>  
 <section id="about" class="container valign-wrapper">
     <div>
         <h2 class="center">Sobre nós</h2>
@@ -362,7 +365,7 @@
   
     // Adiciona o "ouvinte" de evento de envio
     contactForm.addEventListener('submit', function(event) {
-      // Impede o comportamento padrão de envio do formulário (que era ir para o Formspree)
+      // Impede o comportamento padrão de envio do formulário
       event.preventDefault();
   
       // Pega os valores dos campos usando os IDs existentes no seu HTML
@@ -379,8 +382,9 @@
       // Monta a URL final do WhatsApp
       const urlWhatsApp = `https://wa.me/${telefone}?text=${textoWhatsApp}`;
   
-      // Abre o WhatsApp em uma nova aba
-      window.open(urlWhatsApp, '_blank');
+      // --- LINHA ALTERADA ---
+      // Redireciona a página para o link do WhatsApp (Método mais confiável para celular)
+      window.location.href = urlWhatsApp;
     });
   </script>
 
